@@ -60,12 +60,10 @@ public class MainActivity extends Activity {
 				int setpos = position + 1;
 				sitem = db.getContact(setpos);
 				
-//				intent=new Intent();
-//				intent.setClassName("com.example.gpstest", "com.example.Regps.class");
-//				intent.setAction("android.intent.action.EDIT");
-//				intent.putExtra("gps1",	sitem.gpsinfo1);
-//				intent.putExtra("gps2", sitem.gpsinfo2);
-//				startActivity(intent);
+				intent=new Intent("com.example.gpstest.recgps");
+				intent.putExtra("gps1",	sitem.gpsinfo1);
+				intent.putExtra("gps2", sitem.gpsinfo2);
+				startActivity(intent);
 			}
 		});
 		// GPS 정보를 보여주기 위한 이벤트 클래스 등록
@@ -80,13 +78,9 @@ public class MainActivity extends Activity {
 				stoptimer();
 			}
 		});
-		
-		
-
-		
+	
 	}
 	
-
 	public void testtimer(){
 		timert = new Timer();
 		gHandler = new Handler();

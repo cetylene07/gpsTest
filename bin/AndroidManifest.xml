@@ -25,8 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="Regps" >
+        <activity android:name="com.example.gpstest.Regps" >
             <intent-filter>
+                <action android:name="com.example.gpstest.recgps" />
                 <action android:name="android.intent.action.CREATE" />
                 <action android:name="android.intent.action.EDIT" />
 
